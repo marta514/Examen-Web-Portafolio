@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portafolio | Marta</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Estilo para ocultar el modal inicialmente */
+        #modalContacto {
+            display: none;
+        }
+        #modalContacto.flex {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white text-center">
+    <nav class="bg-black p-6 text-purple-700 border-b border-purple-700 flex items-center">
+        <a href="" class="text-2xl font-bold">López</a>
+        <div class="ml-auto flex items-center gap-4">
+            <i class="fa-regular fa-flag"></i>
+            <i class="fa-solid fa-flag"></i>
+            <input type="checkbox" class="accent-purple-700">
+        </div>
+    </nav>
+
+    <div class="container mx-auto py-8">
+        <div class="mb-16">
+            <span class="rounded-full border border-purple-700 p-2 px-4">Disponible para trabajar</span>
+            <h1 class="text-6xl mt-10">¡Hola! Soy <span class="text-purple-700 font-bold">Marta</span></h1>
+            <span class="text-xl text-gray-400 block my-3">Desarrollador Jr</span>
+            <p class="max-w-2xl mx-auto my-5 text-gray-500">Creo hermosas y funcionales experiencias digitales que dan vida a las ideas. Especializada en desarrollo web moderno y diseño orientado al usuario.</p>
+            <div class="flex justify-center gap-4">
+                <button class="px-6 py-2 rounded bg-purple-700 hover:bg-purple-800 transition-all font-bold">Ver Proyectos</button>
+                <button id="btnAbrirModal" class="px-6 py-2 rounded border border-purple-700 hover:bg-purple-700 transition-all">Contactar</button>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-10 mx-5 mb-16">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-6 text-left border-l-4 border-purple-700 pl-4">Sobre mí</h2>
+                <p class="text-left my-2 text-gray-500">Soy una apasionada desarrolladora y diseñadora con 2 años de experiencia construyendo productos digitales que los usuarios aman. Creo en el poder del buen diseño y el código limpio para resolver problemas reales</p>
+                <p class="text-left my-2 text-gray-500">Cuando no estoy programando, me encontrarás explorando nuevas tendencias de diseño o compartiendo mis conocimientos.</p>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="descarga.gif" class="rounded-2xl border border-purple-700 p-2 w-64">
+            </div>
+        </div>
+
+        <h2 class="text-3xl font-bold my-6 mx-5 text-left">Habilidades y tecnologías</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-5 mb-16">
+            <div class="rounded-xl border border-purple-700 bg-white bg-opacity-10 p-6 text-left">
+                <h3 class="mb-4 font-bold text-purple-400">Desarrollo Frontend</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="rounded border border-purple-700 p-2 text-xs">HTML</span>
+                    <span class="rounded border border-purple-700 p-2 text-xs">Tailwind</span>
+                    <span class="rounded border border-purple-700 p-2 text-xs">CSS</span>
+                </div>
+            </div>
+            <div class="rounded-xl border border-purple-700 bg-white bg-opacity-10 p-6 text-left">
+                <h3 class="mb-4 font-bold text-purple-400">Desarrollo Backend</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="rounded border border-purple-700 p-2 text-xs">PHP</span>
+                    <span class="rounded border border-purple-700 p-2 text-xs">SQL</span>
+                </div>
+            </div>
+            <div class="rounded-xl border border-purple-700 bg-white bg-opacity-10 p-6 text-left">
+                <h3 class="mb-4 font-bold text-purple-400">Herramientas</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="rounded border border-purple-700 p-2 text-xs">Git</span>
+                    <span class="rounded border border-purple-700 p-2 text-xs">Figma</span>
+                    <span class="rounded border border-purple-700 p-2 text-xs">Blender</span>
+                </div>
+            </div>
+        </div>
+
+         <div class="bg-white bg-opacity-10 border border-purple-700 p-8 rounded-2xl mx-5 mb-16 shadow-[0_0_20px_rgba(126,34,206,0.1)]">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="border-r border-purple-900 last:border-0">
+                    <div class="flex justify-center items-center gap-4 mb-2">
+                        <span class="text-4xl font-black text-purple-500">5</span>
+                        <i class="fa-solid fa-code text-purple-700 text-2xl"></i>
+                    </div>
+                    <span class="text-gray-400 uppercase text-xs tracking-widest">Proyectos Finalizados</span>
+                </div>
+                <div class="border-r border-purple-900 last:border-0">
+                    <div class="flex justify-center items-center gap-4 mb-2">
+                        <span class="text-4xl font-black text-purple-500">2</span>
+                        <i class="fa-solid fa-calendar-star text-purple-700 text-2xl"></i>
+                    </div>
+                    <span class="text-gray-400 uppercase text-xs tracking-widest">Años de experiencia</span>
+                </div>
+                <div class="border-r border-purple-900 last:border-0">
+                    <div class="flex justify-center items-center gap-4 mb-2">
+                        <span class="text-4xl font-black text-purple-500">3</span>
+                        <i class="fa-solid fa-laptop-code text-purple-700 text-2xl"></i>
+                    </div>
+                    <span class="text-gray-400 uppercase text-xs tracking-widest">Lenguajes</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-3xl font-bold my-6 mx-5 text-left">Experiencia</h2>
+        <div class="space-y-4 mx-5 mb-16">
+            <div class="text-left rounded-xl border border-purple-700 bg-white bg-opacity-10 p-6 hover:bg-opacity-10 transition-all">
+                <h4 class="font-bold text-xl">Artista de Videojuegos</h4>
+                <p class="text-purple-500 font-semibold mb-2">2025 - Presente</p>
+                <p class="text-gray-500 italic">Desarrollo de UX/UI para videojuegos, así como arte conceptual y modelado en 3D.</p>
+            </div>
+            <div class="text-left rounded-xl border border-purple-700 bg-white bg-opacity-10 p-6 hover:bg-opacity-10 transition-all">
+                <h4 class="font-bold text-xl">Junior Web Designer</h4>
+                <p class="text-purple-500 font-semibold mb-2">2023 - 2025</p>
+                <p class="text-gray-500 italic">Creación de wireframes y prototipos para aplicaciones móviles y web.</p>
+            </div>
+        </div>
+
+        <h2 class="text-4xl font-bold my-4 mx-5 ">Mis Proyectos</h2>
+        <p class="mx-5 mb-8 text-gray-400 ">Una colección de los proyectos en los que he trabajado.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-5 mb-16 text-left">
+            <div class="rounded-xl border border-purple-700 bg-white bg-opacity-10 p-6 flex flex-col justify-between hover:scale-[1.02] transition-all">
+                <div>
+                    <img class="w-16 h-16 rounded-lg mb-4 border border-purple-700 p-1" src="descarga.gif">
+                    <h4 class="font-bold text-xl mb-2">Nexus</h4>
+                    <p class="text-gray-500 text-sm mb-4">Aplicación de chat para conectar con roleplayers alrededor del mundo.</p>
+                    <div class="flex gap-2 mb-6">
+                        <span class="text-[10px] border border-purple-700 px-2 py-1 rounded">ANDROID</span>
+                        <span class="text-[10px] border border-purple-700 px-2 py-1 rounded">FLUTTER</span>
+                    </div>
+                </div>
+                <button class="w-full py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-800 transition-colors">Ver detalles</button>
+            </div>
+            <div class="rounded-xl border border-purple-700 bg-white bg-opacity-10 p-6 flex flex-col justify-between hover:scale-[1.02] transition-all">
+                <div>
+                    <img class="w-16 h-16 rounded-lg mb-4 border border-purple-700 p-1" src="ELEMENTRIS.png">
+                    <h4 class="font-bold text-xl mb-2">Elementris</h4>
+                    <p class="text-gray-500 text-sm mb-4">Videojuego movil para aprender química jugando tetris.</p>
+                    <div class="flex gap-2 mb-6">
+                        <span class="text-[10px] border border-purple-700 px-2 py-1 rounded">KRITA</span>
+                        <span class="text-[10px] border border-purple-700 px-2 py-1 rounded">GODOT</span>
+                    </div>
+                </div>
+                <button class="w-full py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-800 transition-colors">Ver detalles</button>
+            </div>
+            <div class="rounded-xl border border-purple-700 bg-white bg-opacity-10 p-6 flex flex-col justify-between hover:scale-[1.02] transition-all">
+                <div>
+                    <img class="w-16 h-16 rounded-lg mb-4 border border-purple-700 p-1" src="HOJAS.png">
+                    <h4 class="font-bold text-xl mb-2">Hojas del ayer</h4>
+                    <p class="text-gray-500 text-sm mb-4">Videojuego de narrativa donde nada es lo que parece.</p>
+                    <div class="flex gap-2 mb-6">
+                        <span class="text-[10px] border border-purple-700 px-2 py-1 rounded">GODOT</span>
+                        <span class="text-[10px] border border-purple-700 px-2 py-1 rounded">C++</span>
+                    </div>
+                </div>
+                <button class="w-full py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-800 transition-colors">Ver detalles</button>
+            </div>
+            <div class="rounded-xl border border-purple-700 bg-white bg-opacity-10 p-6 flex flex-col justify-between hover:scale-[1.02] transition-all">
+                <div>
+                    <img class="w-16 h-16 rounded-lg mb-4 border border-purple-700 p-1" src="descarga.gif">
+                    <h4 class="font-bold text-xl mb-2">Tales</h4>
+                    <p class="text-gray-500 text-sm mb-4">Videojuego para incentivar la lectura.</p>
+                    <div class="flex gap-2 mb-6">
+                        <span class="text-[10px] border border-purple-700 px-2 py-1 rounded">GODOT</span>
+                        <span class="text-[10px] border border-purple-700 px-2 py-1 rounded">ADOBE PHOTOSHOP</span>
+                    </div>
+                </div>
+                <button class="w-full py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-800 transition-colors">Ver detalles</button>
+            </div>
+            <div class="rounded-xl border border-purple-700 bg-white bg-opacity-10 p-6 flex flex-col justify-between hover:scale-[1.02] transition-all">
+                <div>
+                    <img class="w-16 h-16 rounded-lg mb-4 border border-purple-700 p-1" src="descarga.gif">
+                    <h4 class="font-bold text-xl mb-2">Sistema de Gestión de Cursos</h4>
+                    <p class="text-gray-500 text-sm mb-4">Página web para la creación de tareas.</p>
+                    <div class="flex gap-2 mb-6">
+                        <span class="text-[10px] border border-purple-700 px-2 py-1 rounded">HTML</span>
+                        <span class="text-[10px] border border-purple-700 px-2 py-1 rounded">BOOTSTRAP</span>
+                    </div>
+                </div>
+                <button class="w-full py-2 bg-purple-700 rounded-lg font-bold hover:bg-purple-800 transition-colors">Ver detalles</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalContacto" class="fixed inset-0 z-50 items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div class="relative w-full max-w-md bg-gray-900 border-2 border-purple-700 rounded-2xl shadow-2xl">
+            <div class="flex items-center justify-between p-4 border-b border-purple-900">
+                <h3 class="text-xl font-bold text-purple-500">Hablemos</h3>
+                <button id="btnCerrarModal" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            
+            <div class="p-6 text-left">
+                <form id="formContacto">
+    <div class="mb-4">
+        <label class="block text-purple-400 text-sm mb-2 font-bold uppercase tracking-widest">Nombre</label>
+        <input type="text" id="nombre" class="w-full bg-black border border-purple-700 rounded-lg p-3 text-white focus:outline-none" placeholder="Tu nombre" required>
+    </div>
+    <div class="mb-4">
+        <label class="block text-purple-400 text-sm mb-2 font-bold uppercase tracking-widest">Correo</label>
+        <input type="email" id="correo" class="w-full bg-black border border-purple-700 rounded-lg p-3 text-white focus:outline-none" placeholder="correo@ejemplo.com" required>
+    </div>
+    <div class="mb-4">
+        <label class="block text-purple-400 text-sm mb-2 font-bold uppercase tracking-widest">Asunto</label>
+        <input type="text" id="asunto" class="w-full bg-black border border-purple-700 rounded-lg p-3 text-white focus:outline-none" placeholder="Motivo del contacto" required>
+    </div>
+    <button type="submit" id="btnEnviar" class="w-full py-3 mt-4 bg-purple-700 hover:bg-purple-800 rounded-xl font-bold transition-all">
+        Enviar Mensaje
+    </button>
+</form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modalContacto');
+        const btnAbrir = document.getElementById('btnAbrirModal');
+        const btnCerrar = document.getElementById('btnCerrarModal');
+
+        // Abrir modal
+        btnAbrir.addEventListener('click', () => {
+            modal.classList.add('flex');
+        });
+
+        // Cerrar modal al dar clic en la X
+        btnCerrar.addEventListener('click', () => {
+            modal.classList.remove('flex');
+        });
+
+        // Cerrar modal al dar clic fuera del cuadro (en el fondo oscuro)
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('flex');
+            }
+        });
+        
+        $(document).ready(function() {
+    $('#formContacto').on('submit', function(e) {
+        e.preventDefault(); // Evita que la página se recargue
+
+        const btn = $('#btnEnviar');
+btn.prop('disabled', true).text('Enviando...');
+
+const nombre = $('#nombre').val();
+const correo = $('#correo').val();
+const asunto = $('#asunto').val();
+
+const urlBase = "https://diane-domesticable-eliz.ngrok-free.dev/enviar";
+
+const urlProxy = "https://corsproxy.io/?" + urlBase;
+
+$.ajax({
+    url: urlProxy,
+    type: 'POST',
+    contentType: 'application/json',
+    headers: {
+        'ngrok-skip-browser-warning': 'true',
+        'Accept': 'application/json'
+    },
+    data: JSON.stringify({
+        nombre: nombre,
+        correo: correo,
+        asunto: asunto
+    }),
+    success: function(response) {
+        alert('¡Mensaje enviado con éxito!');
+        $('#formContacto')[0].reset();
+        modal.classList.remove('flex');
+    },
+    error: function(xhr) {
+        if(xhr.status === 404) {
+            alert('Error 404: La API de ngrok no se encuentra. Verifica si la URL ha cambiado.');
+        } else {
+            alert('Error de CORS: El servidor remoto sigue rechazando la conexión.');
+        }
+        console.log("Status del error:", xhr.status);
+    },
+    complete: function() {
+        btn.prop('disabled', false).text('Enviar Mensaje');
+    }
+})
+})
+});
+    </script>
+</body>
+</html>
